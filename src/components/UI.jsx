@@ -21,7 +21,7 @@ export const UI = ({ hidden, user, ...props }) => {
     <>
       <div className="fixed top-0 left-0 right-0 bottom-0 z-10 flex justify-between p-4 flex-col pointer-events-none">
         <div className="self-start backdrop-blur-md bg-white bg-opacity-50 p-4 rounded-lg">
-          <h1 className="font-black text-xl">AI Companion 💖</h1>
+          <h1 className="font-black text-xl"> {user?.name} Babie💖</h1>
           <p>Hey {user?.name || 'Beautiful'}!</p>
         </div>
 
@@ -100,21 +100,21 @@ export const UI = ({ hidden, user, ...props }) => {
             <button 
               onClick={() => {input.current.value = "Tell me a joke"; sendMessage();}} 
               disabled={loading || message}
-              className="quick-action-btn"
+              className="quick-action-btn1"
             >
               😄 Joke
             </button>
             <button 
               onClick={() => {input.current.value = "What can you do?"; sendMessage();}} 
               disabled={loading || message}
-              className="quick-action-btn"
+              className="quick-action-btn2"
             >
               🤔 Help
             </button>
             <button 
               onClick={() => {input.current.value = "Tell me something interesting"; sendMessage();}} 
               disabled={loading || message}
-              className="quick-action-btn"
+              className="quick-action-btn3"
             >
               ⭐ Surprise
             </button>

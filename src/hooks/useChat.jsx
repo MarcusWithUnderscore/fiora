@@ -1,5 +1,11 @@
 import { createContext, useContext, useEffect, useState, useRef } from "react";
 
+import { getCurrentUser } from '../services/api';
+
+const data = await getCurrentUser();
+const userName = data.name; 
+
+
 const ChatContext = createContext();
 
 export const ChatProvider = ({ children }) => {
@@ -102,7 +108,7 @@ export const ChatProvider = ({ children }) => {
 
   const displayCaptionsWordByWord = (text, duration) => {
     const words = text.split(/\s+/);
-    const delayPerWord = (duration * 1000) / words.length;
+    const delayPerWord = (duration * 600) / words.length;
     
     let currentText = "";
     words.forEach((word, index) => {
@@ -140,7 +146,7 @@ export const ChatProvider = ({ children }) => {
         },
         body: JSON.stringify({
           message: text,
-          sender: senderRef.current,
+          sender: userName,
           chatId: chatIdRef.current
         })
       });

@@ -17,18 +17,14 @@ const facialExpressions = {
     mouthPressRight: 0.41000000000000003,
   },
   funnyFace: {
-    jawLeft: 0.63,
-    mouthPucker: 0.53,
-    noseSneerLeft: 1,
-    noseSneerRight: 0.39,
-    mouthLeft: 1,
-    eyeLookUpLeft: 1,
-    eyeLookUpRight: 1,
-    cheekPuff: 0.9999924982764238,
-    mouthDimpleLeft: 0.414743888682652,
-    mouthRollLower: 0.32,
-    mouthSmileLeft: 0.35499733688813034,
-    mouthSmileRight: 0.35499733688813034,
+    "mouthSmile": 0.27,
+  "browInnerUp": 0.8999999988035766,
+  "browOuterUpLeft": 0.7999999986888522,
+  "browOuterUpRight": 0.869999998574126,
+  "mouthPressLeft": 1,
+  "mouthPressRight": 1,
+  "eyesLookUp": 0.2
+
   },
   sad: {
     mouthFrownLeft: 1,
@@ -42,11 +38,12 @@ const facialExpressions = {
     jawForward: 1,
   },
   surprised: {
-    eyeWideLeft: 0.5,
-    eyeWideRight: 0.5,
-    jawOpen: 0.351,
-    mouthFunnel: 1,
-    browInnerUp: 1,
+     "mouthOpen": 0.21,
+  "mouthSmile": 1,
+  "browInnerUp": 0.52,
+  "eyeWideLeft": 1,
+  "eyeWideRight": 1,
+  "jawOpen": 1
   },
   angry: {
     browDownLeft: 1,
@@ -259,7 +256,7 @@ export function Avatar(props) {
         if (currentNod < nodCount) {
           setTimeout(performNod, 200);
         }
-      }, 200);
+      }, 800);
     };
 
     performNod();

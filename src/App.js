@@ -41,9 +41,9 @@ function App() {
     return (
       <ChatProvider>
         <Loader />
-        <Leva hidden/>
+        <Leva/>
         <UI user={user} />
-        <Canvas shadows camera={{ position: [0, 0, 0], fov: 40 }}>
+        <Canvas shadows camera={{ position: [0, -1, 0], fov: 50 }}>
           <Experience />
         </Canvas>
          <FloatingFlowers/>
